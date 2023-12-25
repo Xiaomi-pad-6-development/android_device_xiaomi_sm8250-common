@@ -29,4 +29,7 @@
          here. If this settings supports only 2 levels, for example, then the default intensity
          should be either LOW (1) or HIGH (3).
     -->
+
+    <!-- Whether to show min/max refresh rate in display settings -->
+    <bool name="config_show_refresh_rate_controls">true</bool>
 </resources>
