@@ -223,18 +223,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
-
-ifeq ($(TARGET_HAS_UDFPS),true)
-PRODUCT_PACKAGES += \
-    libudfpshandler
-
-PRODUCT_PACKAGES += \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
-endif
-
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
@@ -474,15 +462,6 @@ PRODUCT_PACKAGES += \
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
-
-# Vibrator
-ifneq ($(PRODUCT_IS_TABLET),true)
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.xiaomi_kona
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
-endif
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
